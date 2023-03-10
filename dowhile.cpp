@@ -5,8 +5,8 @@ int main()
 {
 	setlocale(0, "");
 	//system("color B5");
-
-	/*cout << "Задание 1\n";
+	
+	cout << "Задание 1\n";
 	int answer, A, B, res;
 	do {
 		cout << "1 - [+]\n2 - [-]\n3 - [exit]" << endl;
@@ -36,22 +36,23 @@ int main()
 	} while (answer != 3);
 	/*Разработать программу, которая выводит на экран горизонтальную линию из символов.
 		Число символов, какой использовать символ, и какая будет линия - верт.или горизонт.
-		- указывает пользователь.
+		- указывает пользователь.*/
 
 
 	cout << "\n\nЗадание 2\n";
-
+	
 	int line,ANS;
 	cout << "1 - [|]\n2 - [_]\n3 - [exit]" << endl;
 	cin >> ANS;
-	
+	char sym;
+	cin >> sym;
 	int i = 0;
 	while (ANS != 3) {
 		switch (ANS) {
 		case 1:
 			cin >> line;
 			while (i < line) {
-				cout << "|";
+				cout << sym << "\n";
 				i++;
 			}
 			break;
@@ -59,12 +60,11 @@ int main()
 			
 			cin >> line;
 			while (i < line) {
-				cout << "_";
+				cout << sym;
 				i++;
 			}
 			break;
 		case 3:
-			
 			cout << "Exit";
 			break;
 		}
@@ -74,13 +74,14 @@ int main()
 	do {
 		cout << "1 - [|]\n2 - [_]\n3 - [exit]" << endl;
 		cin >> ANS;
+		cin >> sym;
 		int i = 0;
 			switch (ANS) {
 			case 1:
 				cin >> line;
 				system("cls");
 				while (i < line) {
-					cout << "|";
+					cout << sym << "\n";
 					i++;
 				}
 				cout << "\n";
@@ -89,7 +90,7 @@ int main()
 				system("cls");
 				cin >> line;
 				while (i < line) {
-					cout << "_";
+					cout << sym;
 					i++;
 				}
 				cout << "\n";
@@ -99,8 +100,18 @@ int main()
 				cout << "Exit";
 				break;
 			}
-		}while (ANS != 3);*/
+		}while (ANS != 3);
+		
 
+	int SIZE; int take = 5; int count = 0; // машины возят по 5 ящиков
+	cout << "\nВведите количество ящиков:\n";
+	cin >> SIZE;
+	/*do {
+	} while (SIZE > 0);*/
 
-
+	while (SIZE > 0) {
+		SIZE = SIZE - take;
+		++count;
+	}
+	cout << "\nМашин подъехало: " << count;
 }
